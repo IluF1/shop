@@ -38,6 +38,7 @@ export const Input = ({
                 <button
                     onClick={() => setShow(!show)}
                     className={styles.eye_button}
+                    type="button"
                 >
                     {show ? (
                         <Eye className={styles.eye} />

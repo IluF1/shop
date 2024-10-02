@@ -1,7 +1,7 @@
 .input,
 .password {
-    height: 30px;
-    width: 400px;
+    height: 40px;
+    width: 100%;
     padding-left: 10px;
     border-radius: 8px;
     border: 1px solid rgb(219, 221, 234);
@@ -22,8 +22,8 @@
 
 .eye {
     position: absolute;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     color: rgb(119, 120, 127);
 }
 
@@ -31,11 +31,10 @@
     cursor: pointer;
     border: none;
     background-color: transparent;
-    margin-top: -19px;
     margin-left: -33px;
+    margin-top: -18px;
 }
 
 .container {
     display: flex;
-    justify-content: flex-end;
 }
