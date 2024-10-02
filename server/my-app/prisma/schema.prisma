@@ -21,3 +21,12 @@ model User {
   password String
   avatar   String @default("https://i.pinimg.com/564x/08/7d/46/087d46ee14dc2211428f4e1b8872d206.jpg")
 }
+
+model Card {
+  id          Int    @id @default(autoincrement())
+  name        String
+  description String
+  price       Int
+  mainImage   String
+  images      String
+}
