@@ -1,0 +1,41 @@
+.input,
+.password {
+    height: 30px;
+    width: 400px;
+    padding-left: 10px;
+    border-radius: 8px;
+    border: 1px solid rgb(219, 221, 234);
+    transition: 0.2s ease-in-out;
+    color: rgb(31, 31, 31);
+}
+
+.input:focus,
+.password:focus {
+    border: 1px solid rgb(37, 175, 120);
+    outline: none;
+    box-shadow: 2px 5px 30px rgba(42, 178, 124, 0.277);
+}
+
+.password {
+    padding-right: 40px;
+}
+
+.eye {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    color: rgb(119, 120, 127);
+}
+
+.eye_button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    margin-top: -19px;
+    margin-left: -33px;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+}

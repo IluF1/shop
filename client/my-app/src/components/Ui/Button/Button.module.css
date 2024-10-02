@@ -1,0 +1,45 @@
+.default {
+    width: 200px;
+    height: 40px;
+    background-color: rgb(59, 138, 106);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.default:hover {
+    background-color: rgb(40, 93, 72);
+}
+
+.ghost {
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.ghost:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+.outline {
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid  rgb(59, 138, 106);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.outline:hover {
+    background-color: rgb(59, 138, 106);
+    color: white;
+}
