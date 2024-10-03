@@ -38,9 +38,11 @@ const Auth = () => {
                                 ? "Войти через почту"
                                 : " Войти через логин"}
                         </Button>
-                        <Button variant="outline" className={styles.button}>
-                            Зарегистрироваться
-                        </Button>
+                        <a href="/registration">
+                            <Button variant="outline" className={styles.button}>
+                                Зарегистрироваться
+                            </Button>
+                        </a>
                     </div>
                 </form>
             </div>

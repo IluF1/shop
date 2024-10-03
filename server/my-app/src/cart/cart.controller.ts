@@ -1,7 +1,11 @@
-import { Controller } from '@nestjs/common';
-import { CartService } from './cart.service';
+import { Controller } from "@nestjs/common";
+import { CartService } from "./cart.service";
+import { ApiTags } from "@nestjs/swagger";
 
-@Controller('cart')
+@ApiTags("Корзина")
+@Controller("cart")
 export class CartController {
-  constructor(private readonly cartService: CartService) {}
+    constructor(private readonly cartService: CartService) {}
+
+    
 }

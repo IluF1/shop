@@ -12,6 +12,7 @@ interface Props {
     className?: string;
     onClick?: () => void;
     type?: types;
+    href?: string;
 }
 
 export const Button = memo(

@@ -1,19 +1,21 @@
 import { CSSProperties } from "react";
 import SyncLoader from "react-spinners/SyncLoader";
 
+import styles from './Spinner.module.css'
+
 const override: CSSProperties = {
-    display: "block",
-    margin: "0 auto",
     borderColor: "rgb(59, 138, 106)",
 };
 export const Spinner = () => {
     return (
-        <SyncLoader
-            color={"rgb(59, 138, 106)"}
-            cssOverride={override}
-            size={20}
-            aria-label="Loading Spinner"
-            data-testid="loader"
-        />
+        <div className={styles.container}>
+            <SyncLoader
+                color={"rgb(59, 138, 106)"}
+                cssOverride={override}
+                size={20}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+            />
+        </div>
     );
 };
