@@ -1,3 +1,5 @@
-export const CardPage = () => {
+const CardPage = () => {
     return <div></div>
 }
+
+export default CardPage

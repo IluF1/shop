@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { memo } from "react";
 
 import styles from "./Button.module.css";
 
@@ -13,20 +14,22 @@ interface Props {
     type?: types;
 }
 
-export const Button = ({
-    children,
-    className,
-    variant = "default",
-    onClick,
-    type = "button",
-}: Props) => {
-    return (
-        <button
-            className={classNames(styles[variant], className)}
-            onClick={onClick}
-            type={type}
-        >
-            {children}
-        </button>
-    );
-};
+export const Button = memo(
+    ({
+        children,
+        className,
+        variant = "default",
+        onClick,
+        type = "button",
+    }: Props) => {
+        return (
+            <button
+                className={classNames(styles[variant], className)}
+                onClick={onClick}
+                type={type}
+            >
+                {children}
+            </button>
+        );
+    },
+);

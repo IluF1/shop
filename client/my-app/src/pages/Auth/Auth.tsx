@@ -6,8 +6,7 @@ import { Text } from "@/components/Ui/Text";
 
 import styles from "./Auth.module.css";
 
-export const Auth = () => {
-    const [isReg, setIsReg] = useState<boolean>(false);
+const Auth = () => {
     const [logInViaLogin, setLogInViaLogin] = useState<boolean>(false);
     return (
         <div className={styles.container}>
@@ -15,55 +14,38 @@ export const Auth = () => {
                 <Text>Войдите в свой аккаунт</Text>
                 <form className={styles.form}>
                     {logInViaLogin ? (
-                        <Input placeholder="Ваш логин" />
+                        <Input
+                            placeholder="Ваш логин"
+                            className={styles.input}
+                        />
                     ) : (
                         <Input
                             placeholder="Ваша почта"
                             className={styles.input}
                         />
                     )}
-                    {isReg && (
-                        <div>
-                            <Input
-                                placeholder="Ваш логин"
-                                className={styles.input}
-                            />
-                        </div>
-                    )}
+
                     <Input placeholder="Ваш пароль" type="password" />
                     <div className={styles.buttons}>
-                        <Button>
-                            {isReg ? "Зарегистрироваться" : "Войти"}
+                        <Button type="submit">Войти</Button>
+
+                        <Button
+                            variant="outline"
+                            className={styles.button}
+                            onClick={() => setLogInViaLogin(!logInViaLogin)}
+                        >
+                            {logInViaLogin
+                                ? "Войти через почту"
+                                : " Войти через логин"}
                         </Button>
-                        {!isReg ? (
-                            <>
-                                <Button
-                                    variant="outline"
-                                    className={styles.button}
-                                    onClick={() => setLogInViaLogin(true)}
-                                >
-                                    Войти через логин
-                                </Button>
-                                <Button
-                                    variant="outline"
-                                    className={styles.button}
-                                    onClick={() => setIsReg(true)}
-                                >
-                                    Зарегистрироваться
-                                </Button>
-                            </>
-                        ) : (
-                            <Button
-                                className={styles.button}
-                                variant="ghost"
-                                onClick={() => setIsReg(false)}
-                            >
-                                Есть аккаунт? Войти
-                            </Button>
-                        )}
+                        <Button variant="outline" className={styles.button}>
+                            Зарегистрироваться
+                        </Button>
                     </div>
                 </form>
             </div>
         </div>
     );
 };
+
+export default Auth;
