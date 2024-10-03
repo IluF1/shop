@@ -1,6 +1,0 @@
-model Cart {
-    id       Int    @id @default(autoincrement())
-    amount   Int
-    quantity Int
-    cards    Card[]
-}
